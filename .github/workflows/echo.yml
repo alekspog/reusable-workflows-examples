@@ -1,4 +1,4 @@
-name: 'Echo text'
+name: 'Echo text to stdout'
 
 on:
   workflow_call:
