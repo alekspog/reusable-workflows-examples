@@ -10,7 +10,7 @@ on:
 
 jobs:
   echo-text:
-    name: Create release if tag does not exist
+    name: Echo text to summary
     runs-on: ubuntu-latest
     steps:
       - name: Output text to summary
