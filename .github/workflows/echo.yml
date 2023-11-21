@@ -1,0 +1,17 @@
+name: 'Echo text'
+
+on:
+  workflow_call:
+    inputs:
+      text:
+        required: false
+        type: string
+        default: hello
+
+jobs:
+  echo-text:
+    name: Create release if tag does not exist
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo text to stdout
+        run: echo ${{ inputs.text }}

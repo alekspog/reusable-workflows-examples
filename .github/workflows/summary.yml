@@ -1,0 +1,17 @@
+name: 'Print text to job summary'
+
+on:
+  workflow_call:
+    inputs:
+      text:
+        required: false
+        type: string
+        default: hello
+
+jobs:
+  echo-text:
+    name: Create release if tag does not exist
+    runs-on: ubuntu-latest
+    steps:
+      - name: Output text to summary
+        run: echo ${{ inputs.text }} >> $GITHUB_STEP_SUMMARY
